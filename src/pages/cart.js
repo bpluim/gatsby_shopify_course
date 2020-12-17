@@ -1,10 +1,12 @@
 import React from 'react';
-import { Layout, CartContents } from 'components';
+import {Layout, CartContents} from 'components';
 
-export default function CartPage() {
+const CartPage = () => {
     return (
         <Layout>
             <CartContents />
         </Layout>
     )
-}
+}  
+
+export default CartPage;

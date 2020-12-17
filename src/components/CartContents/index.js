@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import CartContext from 'context/CartContext';
 import {CartItem} from './styles';
 
@@ -7,29 +7,29 @@ export function CartContents() {
 
     return (
         <section>
-            <h1>
-                Your Cart
-            </h1>
+            <h1>Your Cart</h1>
             {checkout?.lineItems?.map(item => {
-                <CartItem key={item.variant.id}>
-                    <div>
+                return (
+                    <CartItem key={item.variant.id}>
                         <div>
-                            {item.title}
+                            <div>
+                                {item.title}
+                            </div>
+                            <div>
+                                {item.variant.title}
+                            </div>
                         </div>
                         <div>
-                            {item.variant.title}
+                            ${item.variant.price}
                         </div>
-                    </div>
-                    <div>
-                        ${item.variant.price}
-                    </div>
-                    <div>
-                        {item.quantity}
-                    </div>
-                    <div>
-                        {(item.quantity * item.variant.price).toFixed(2)}
-                    </div>
-                </CartItem>
+                        <div>
+                            {item.quantity}
+                        </div>
+                        <div>
+                            {(item.quantity * item.variant.price).toFixed(2)}
+                        </div>
+                    </CartItem>
+                );
             })}
         </section>
     )

@@ -11,7 +11,7 @@ export const CartWrapper = styled(StyledLink).attrs(() => ({
 
     >div:last-child {
         padding-left: 8px;
-        margin: auto 10px;
+        margin: auto 0;
     }
 
     &:hover {

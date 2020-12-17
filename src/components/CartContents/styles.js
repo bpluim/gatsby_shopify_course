@@ -5,6 +5,11 @@ export const CartFooter = styled.div`
     grid-template-columns: 5fr 1fr 40px;
     >div {
         padding: 8px;
+
+        &:first-child {
+            text-align: right;
+            
+        }
     }
 `;
 
